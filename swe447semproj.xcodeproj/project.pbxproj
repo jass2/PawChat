@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,13 @@
 		8B9F9D5E234FCBE600FCD3CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B9F9D5D234FCBE600FCD3CE /* Assets.xcassets */; };
 		8B9F9D61234FCBE600FCD3CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B9F9D60234FCBE600FCD3CE /* Preview Assets.xcassets */; };
 		8B9F9D64234FCBE600FCD3CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B9F9D62234FCBE600FCD3CE /* LaunchScreen.storyboard */; };
+		8B9F9D6C234FCCD700FCD3CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B9F9D6B234FCCD700FCD3CE /* GoogleService-Info.plist */; };
+		F4A2ADBC0FDA43E76EFE8D0D /* Pods_swe447semproj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC405B293E8E4D3FB840FEA /* Pods_swe447semproj.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3481815CAAFFDD5DF19B847C /* Pods-swe447semproj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swe447semproj.release.xcconfig"; path = "Target Support Files/Pods-swe447semproj/Pods-swe447semproj.release.xcconfig"; sourceTree = "<group>"; };
+		4DC405B293E8E4D3FB840FEA /* Pods_swe447semproj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swe447semproj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9F9D54234FCBE400FCD3CE /* swe447semproj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swe447semproj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9F9D57234FCBE400FCD3CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B9F9D59234FCBE400FCD3CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		8B9F9D60234FCBE600FCD3CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8B9F9D63234FCBE600FCD3CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B9F9D65234FCBE600FCD3CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B9F9D6B234FCCD700FCD3CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DDA61B48DE20E879EADDBC45 /* Pods-swe447semproj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swe447semproj.debug.xcconfig"; path = "Target Support Files/Pods-swe447semproj/Pods-swe447semproj.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A2ADBC0FDA43E76EFE8D0D /* Pods_swe447semproj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78F1C78F5711946D9CDE8263 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDA61B48DE20E879EADDBC45 /* Pods-swe447semproj.debug.xcconfig */,
+				3481815CAAFFDD5DF19B847C /* Pods-swe447semproj.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8B9F9D4B234FCBE400FCD3CE = {
 			isa = PBXGroup;
 			children = (
 				8B9F9D56234FCBE400FCD3CE /* swe447semproj */,
 				8B9F9D55234FCBE400FCD3CE /* Products */,
+				78F1C78F5711946D9CDE8263 /* Pods */,
+				A4ED9CFA1F0F934AE648FC5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +74,7 @@
 		8B9F9D56234FCBE400FCD3CE /* swe447semproj */ = {
 			isa = PBXGroup;
 			children = (
+				8B9F9D6B234FCCD700FCD3CE /* GoogleService-Info.plist */,
 				8B9F9D57234FCBE400FCD3CE /* AppDelegate.swift */,
 				8B9F9D59234FCBE400FCD3CE /* SceneDelegate.swift */,
 				8B9F9D5B234FCBE400FCD3CE /* ContentView.swift */,
@@ -75,6 +94,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A4ED9CFA1F0F934AE648FC5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4DC405B293E8E4D3FB840FEA /* Pods_swe447semproj.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B9F9D68234FCBE600FCD3CE /* Build configuration list for PBXNativeTarget "swe447semproj" */;
 			buildPhases = (
+				25052032BBEF9568239C6297 /* [CP] Check Pods Manifest.lock */,
 				8B9F9D50234FCBE400FCD3CE /* Sources */,
 				8B9F9D51234FCBE400FCD3CE /* Frameworks */,
 				8B9F9D52234FCBE400FCD3CE /* Resources */,
+				A9C4A86D099F6E1FF7024DA4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,12 +163,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B9F9D64234FCBE600FCD3CE /* LaunchScreen.storyboard in Resources */,
+				8B9F9D6C234FCCD700FCD3CE /* GoogleService-Info.plist in Resources */,
 				8B9F9D61234FCBE600FCD3CE /* Preview Assets.xcassets in Resources */,
 				8B9F9D5E234FCBE600FCD3CE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25052032BBEF9568239C6297 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swe447semproj-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9C4A86D099F6E1FF7024DA4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swe447semproj/Pods-swe447semproj-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swe447semproj/Pods-swe447semproj-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swe447semproj/Pods-swe447semproj-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B9F9D50234FCBE400FCD3CE /* Sources */ = {
@@ -282,6 +354,7 @@
 		};
 		8B9F9D69234FCBE600FCD3CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDA61B48DE20E879EADDBC45 /* Pods-swe447semproj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +375,7 @@
 		};
 		8B9F9D6A234FCBE600FCD3CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3481815CAAFFDD5DF19B847C /* Pods-swe447semproj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
