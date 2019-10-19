@@ -14,6 +14,9 @@
 		8B9F9D61234FCBE600FCD3CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B9F9D60234FCBE600FCD3CE /* Preview Assets.xcassets */; };
 		8B9F9D64234FCBE600FCD3CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B9F9D62234FCBE600FCD3CE /* LaunchScreen.storyboard */; };
 		8B9F9D6C234FCCD700FCD3CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B9F9D6B234FCCD700FCD3CE /* GoogleService-Info.plist */; };
+		8B9F9D6E235A920300FCD3CE /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F9D6D235A920300FCD3CE /* SigninViewController.swift */; };
+		8B9F9D70235A929300FCD3CE /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F9D6F235A929300FCD3CE /* HomePageView.swift */; };
+		8B9F9D72235A929D00FCD3CE /* LoginFailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F9D71235A929D00FCD3CE /* LoginFailViewController.swift */; };
 		F4A2ADBC0FDA43E76EFE8D0D /* Pods_swe447semproj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC405B293E8E4D3FB840FEA /* Pods_swe447semproj.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		8B9F9D63234FCBE600FCD3CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B9F9D65234FCBE600FCD3CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B9F9D6B234FCCD700FCD3CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8B9F9D6D235A920300FCD3CE /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		8B9F9D6F235A929300FCD3CE /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		8B9F9D71235A929D00FCD3CE /* LoginFailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFailViewController.swift; sourceTree = "<group>"; };
 		DDA61B48DE20E879EADDBC45 /* Pods-swe447semproj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swe447semproj.debug.xcconfig"; path = "Target Support Files/Pods-swe447semproj/Pods-swe447semproj.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +88,9 @@
 				8B9F9D62234FCBE600FCD3CE /* LaunchScreen.storyboard */,
 				8B9F9D65234FCBE600FCD3CE /* Info.plist */,
 				8B9F9D5F234FCBE600FCD3CE /* Preview Content */,
+				8B9F9D6D235A920300FCD3CE /* SigninViewController.swift */,
+				8B9F9D6F235A929300FCD3CE /* HomePageView.swift */,
+				8B9F9D71235A929D00FCD3CE /* LoginFailViewController.swift */,
 			);
 			path = swe447semproj;
 			sourceTree = "<group>";
@@ -114,6 +123,7 @@
 				8B9F9D51234FCBE400FCD3CE /* Frameworks */,
 				8B9F9D52234FCBE400FCD3CE /* Resources */,
 				A9C4A86D099F6E1FF7024DA4 /* [CP] Embed Pods Frameworks */,
+				57489104AA20AD6E654B7C78 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +204,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		57489104AA20AD6E654B7C78 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swe447semproj/Pods-swe447semproj-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swe447semproj/Pods-swe447semproj-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swe447semproj/Pods-swe447semproj-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A9C4A86D099F6E1FF7024DA4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,9 +245,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B9F9D6E235A920300FCD3CE /* SigninViewController.swift in Sources */,
 				8B9F9D58234FCBE400FCD3CE /* AppDelegate.swift in Sources */,
 				8B9F9D5A234FCBE400FCD3CE /* SceneDelegate.swift in Sources */,
 				8B9F9D5C234FCBE400FCD3CE /* ContentView.swift in Sources */,
+				8B9F9D72235A929D00FCD3CE /* LoginFailViewController.swift in Sources */,
+				8B9F9D70235A929300FCD3CE /* HomePageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

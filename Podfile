@@ -9,4 +9,8 @@ target 'swe447semproj' do
   pod 'Firebase/Auth'
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
+  pod 'FirebaseUI'
+  pod 'FirebaseUI/Google'
+
+
 end
