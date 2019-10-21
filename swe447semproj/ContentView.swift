@@ -7,10 +7,13 @@
 //
 
 import SwiftUI
+import GoogleSignIn
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        let googleButton = GIDSignInButton()
+               view.addSubview(googleButton)
+        
     }
 }
 

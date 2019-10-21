@@ -1,5 +1,5 @@
 //
-//  SigninViewController.swift
+//  Launch.swift
 //  swe447semproj
 //
 //  Created by Jason Seaman on 10/18/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SigninViewController: UIViewController {
+class Launch: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

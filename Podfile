@@ -11,6 +11,6 @@ target 'swe447semproj' do
   pod 'Firebase/Database'
   pod 'FirebaseUI'
   pod 'FirebaseUI/Google'
-
+  pod 'GoogleSignIn'
 
 end
