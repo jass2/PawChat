@@ -11,13 +11,12 @@ import GoogleSignIn
 
 struct ContentView: View {
     var body: some View {
-        let googleButton = GIDSignInButton()
-               view.addSubview(googleButton)
-        
+        Text("contentView")
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    
     static var previews: some View {
         ContentView()
     }

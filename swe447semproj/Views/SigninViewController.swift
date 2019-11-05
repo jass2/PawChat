@@ -10,20 +10,9 @@ import UIKit
 import GoogleSignIn
 import SwiftUI
 
-class SigninViewController: UIViewController {
+class SigninViewController: ObservableObject {
 
-    override func viewDidLoad() {
-      super.viewDidLoad()
-
-    GIDSignIn.sharedInstance()?.presentingViewController = self
-    GIDSignIn.sharedInstance().signIn()
-
-        let googleButton = GIDSignInButton()
-        view.addSubview(googleButton)
-        
-      // TODO(developer) Configure the sign-in button look/feel
-      // ...
-    }
+   
     
 
     

@@ -10,7 +10,7 @@
         <!--Signin View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" customClass="SigninViewController" customModule="swe447semproj" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="01J-lp-oVM" customClass="SigninViewController" customModule="swe447semproj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="954" y="375"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Image Picker Controller-->
         <scene sceneID="e2T-ZB-ofS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="5Ur-Fj-uZm" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="main" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="5Ur-Fj-uZm" customClass="UIImagePickerController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qFF-2v-eNc">
                         <autoresizingMask key="autoresizingMask"/>
