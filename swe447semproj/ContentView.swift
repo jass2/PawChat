@@ -10,13 +10,22 @@ import SwiftUI
 import GoogleSignIn
 
 struct ContentView: View {
+    
+    @State var post = 0
+    
     var body: some View {
-        Text("contentView")
+        NavigationView {
+            Form {
+                Text("contentView")
+                Button("Sign In \(post)") {
+                    self.post += 1 % 2
+                }
+            }
+        }.navigationBarTitle("Login")
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    
     static var previews: some View {
         ContentView()
     }

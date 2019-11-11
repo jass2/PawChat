@@ -8,8 +8,8 @@ target 'swe447semproj' do
   # Pods for swe447semproj
   pod 'Firebase/Auth'
   pod 'Firebase/Analytics'
-  pod 'Firebase/Database'
-  pod 'FirebaseUI'
+ # pod 'Firebase/Database'
+ # pod 'FirebaseUI'
   pod 'FirebaseUI/Google'
   pod 'GoogleSignIn'
 

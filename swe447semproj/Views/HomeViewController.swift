@@ -1,23 +1,19 @@
 //
-//  SignInViewController.swift
+//  HomeViewController.swift
 //  swe447semproj
 //
 //  Created by Jason Seaman on 11/5/19.
 //  Copyright © 2019 SWE447. All rights reserved.
 //
-import GoogleSignIn
+
 import UIKit
 
-class SignInViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance().signIn()
 
-        let googleButton = GIDSignInButton()
-        view.addSubview(googleButton)
+        // Do any additional setup after loading the view.
     }
     
 

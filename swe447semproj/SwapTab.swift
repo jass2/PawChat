@@ -14,8 +14,8 @@ struct SwapTab: View {
             ContentView().tabItem {
                 Text("Feed")
             }
-            ProfileView().tabItem {
-                Text("Profile")
+            CreateView().tabItem {
+                Text("Post")
             }
         }    }
 }
