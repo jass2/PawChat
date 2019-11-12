@@ -21,9 +21,8 @@ struct SwapTab: View {
 }
 
 struct SwapTab_Previews: PreviewProvider {
-    static let profile = Profile()
     static var previews: some View {
-        SwapTab().environmentObject(profile)
+        SwapTab()
     }
 }
        

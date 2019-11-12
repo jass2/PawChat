@@ -12,7 +12,11 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let title = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
+        title.text = "Home Page"
+        title.center = view.center
+        view.addSubview(title)
+        view.backgroundColor = .white
         // Do any additional setup after loading the view.
     }
     

@@ -6,10 +6,8 @@ struct LoginView: View {
             ContentView().tabItem {
                 Text("Feed")
             }
-            ProfileView().tabItem {
-                Text("Profile")
-            }
-        }    }
+        }
+    }
 }
 
 struct LoginView_Previews: PreviewProvider {
