@@ -9,26 +9,48 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    var tableView = UITableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let title = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
-        title.text = "Home Page"
-        title.center = view.center
-        view.addSubview(title)
-        view.backgroundColor = .white
-        // Do any additional setup after loading the view.
+        setTableView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setTableView() {
+        tableView.frame = self.view.frame
+        tableView.backgroundColor = UIColor.white
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.register(PostCell.self, forCellReuseIdentifier: "PostCell")
+        
+        self.view.addSubview(tableView)
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        tableView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        
     }
-    */
+    
+}
 
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
+        
+        let post = Post(postContent: "Here is body", poster: "Jason Seaman")
+
+        cell.post = post
+        
+        return cell
+    }
 }
