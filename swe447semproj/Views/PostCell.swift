@@ -63,9 +63,6 @@ class PostCell: UITableViewCell {
         poster.topAnchor.constraint(equalTo: postBody.bottomAnchor).isActive = true
         poster.numberOfLines = 0
         
-        
-     //   poster.anchor(top: postBody.bottomAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 10, paddingBottom: 0, paddingRight: 0, width: frame.size.width, height: 0, enableInsets: false)
-        
     }
     
     required init?(coder: NSCoder) {

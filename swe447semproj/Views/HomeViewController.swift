@@ -11,11 +11,17 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var tableView = UITableView()
+    let posters = ["Jason Seaman", "Devon Adams", "Professor McDonald", "Freeman Hrabowski"]
+    let posts = ["Is anyone going to the basketball game tonight? They're giving away free glowsticks.", "How is everyone today?", "When is the last day of finals?", "H.A.G.S"]
+    let comments = [["Not me", "Maybe"],["Bad"],["I don't know"],[]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Paw Feed"
         setTableView()
     }
+    
+    
     
     func setTableView() {
         tableView.frame = self.view.frame
@@ -41,16 +47,26 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
         
-        let post = Post(postContent: "Here is body", poster: "Jason Seaman")
+        let post = Post(postContent: posts[indexPath.row], poster: posters[indexPath.row])
 
         cell.post = post
         
         return cell
     }
+    internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let pvc = ViewPostController()
+        pvc.mainBody = posts[indexPath.row]
+        pvc.poster = posters[indexPath.row]
+        pvc.comments = comments[indexPath.row]
+        pvc.topPost.text = posts[indexPath.row]
+        self.navigationController?.pushViewController(pvc, animated: true)
+    }
+
 }
