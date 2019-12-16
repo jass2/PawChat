@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DF82E651D87C429A305F1B7 /* Pods_swe447semproj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53301395F009E1BBB417160 /* Pods_swe447semproj.framework */; };
+		01F5A91FE6778508AC77CD89 /* Pods_swe447semproj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37A8A8A35A88652270B047B /* Pods_swe447semproj.framework */; };
 		8B046B12237A9E420043A168 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B046B11237A9E420043A168 /* test.swift */; };
 		8B18066C23720F630071B381 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B18066B23720F630071B381 /* HomeViewController.swift */; };
 		8B18066E23720FBF0071B381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B18066D23720FBF0071B381 /* Main.storyboard */; };
@@ -28,14 +28,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		77D6165572F8118408372420 /* Pods-swe447semproj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swe447semproj.debug.xcconfig"; path = "Target Support Files/Pods-swe447semproj/Pods-swe447semproj.debug.xcconfig"; sourceTree = "<group>"; };
+		6C606D4A215703931945506F /* Pods-swe447semproj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swe447semproj.release.xcconfig"; path = "Target Support Files/Pods-swe447semproj/Pods-swe447semproj.release.xcconfig"; sourceTree = "<group>"; };
 		8B046B11237A9E420043A168 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		8B18066B23720F630071B381 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8B18066D23720FBF0071B381 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8B1F04B9235ABD9B0053E667 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		8B8B4AE42378E68C0061BB8C /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		8B8B4AE62378EBC40061BB8C /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
-		8B9F9D54234FCBE400FCD3CE /* swe447semproj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swe447semproj.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B9F9D54234FCBE400FCD3CE /* Paw Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Paw Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9F9D57234FCBE400FCD3CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B9F9D59234FCBE400FCD3CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8B9F9D5D234FCBE600FCD3CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,9 +47,10 @@
 		8BDC7C59238B334E00A9DAE1 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		8BDC7C5B238B3BBE00A9DAE1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		8BDC7C5D238B413300A9DAE1 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		8BE522CB23A73C3600BBB20A /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo.jpg; path = ../../../../logo.jpg; sourceTree = "<group>"; };
 		8BF8CA60236BA46A002B980B /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		9A33D8108A606633CDBFADD4 /* Pods-swe447semproj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swe447semproj.release.xcconfig"; path = "Target Support Files/Pods-swe447semproj/Pods-swe447semproj.release.xcconfig"; sourceTree = "<group>"; };
-		D53301395F009E1BBB417160 /* Pods_swe447semproj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swe447semproj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0086C37ACA92EDBAECBBEBA /* Pods-swe447semproj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swe447semproj.debug.xcconfig"; path = "Target Support Files/Pods-swe447semproj/Pods-swe447semproj.debug.xcconfig"; sourceTree = "<group>"; };
+		E37A8A8A35A88652270B047B /* Pods_swe447semproj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swe447semproj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,17 +58,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DF82E651D87C429A305F1B7 /* Pods_swe447semproj.framework in Frameworks */,
+				01F5A91FE6778508AC77CD89 /* Pods_swe447semproj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D33A69ABAA59AEA2F4BD8C0 /* Frameworks */ = {
+		47BD34E2C77833DDC2FD5FA5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D53301395F009E1BBB417160 /* Pods_swe447semproj.framework */,
+				E37A8A8A35A88652270B047B /* Pods_swe447semproj.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -75,8 +76,8 @@
 		78F1C78F5711946D9CDE8263 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				77D6165572F8118408372420 /* Pods-swe447semproj.debug.xcconfig */,
-				9A33D8108A606633CDBFADD4 /* Pods-swe447semproj.release.xcconfig */,
+				A0086C37ACA92EDBAECBBEBA /* Pods-swe447semproj.debug.xcconfig */,
+				6C606D4A215703931945506F /* Pods-swe447semproj.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -87,14 +88,14 @@
 				8B9F9D56234FCBE400FCD3CE /* swe447semproj */,
 				8B9F9D55234FCBE400FCD3CE /* Products */,
 				78F1C78F5711946D9CDE8263 /* Pods */,
-				5D33A69ABAA59AEA2F4BD8C0 /* Frameworks */,
+				47BD34E2C77833DDC2FD5FA5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		8B9F9D55234FCBE400FCD3CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B9F9D54234FCBE400FCD3CE /* swe447semproj.app */,
+				8B9F9D54234FCBE400FCD3CE /* Paw Chat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +128,7 @@
 		8B9F9D73235A95DD00FCD3CE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8BE522CB23A73C3600BBB20A /* logo.jpg */,
 				8B18066B23720F630071B381 /* HomeViewController.swift */,
 				8BDC7C5D238B413300A9DAE1 /* Extension.swift */,
 				8BDC7C59238B334E00A9DAE1 /* PostCell.swift */,
@@ -147,12 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B9F9D68234FCBE600FCD3CE /* Build configuration list for PBXNativeTarget "swe447semproj" */;
 			buildPhases = (
-				8CDE9D663E93E5379A4ADC21 /* [CP] Check Pods Manifest.lock */,
+				07F1B39DF6DCC97F83FAF244 /* [CP] Check Pods Manifest.lock */,
 				8B9F9D50234FCBE400FCD3CE /* Sources */,
 				8B9F9D51234FCBE400FCD3CE /* Frameworks */,
 				8B9F9D52234FCBE400FCD3CE /* Resources */,
-				3691FD969DE588EDAB5287A9 /* [CP] Embed Pods Frameworks */,
-				B607D0BD8AB7DD337E8C7443 /* [CP] Copy Pods Resources */,
+				2174EC38B6CBD1B84161131A /* [CP] Embed Pods Frameworks */,
+				5D1B7E748157DB3091D57E94 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,7 +162,7 @@
 			);
 			name = swe447semproj;
 			productName = swe447semproj;
-			productReference = 8B9F9D54234FCBE400FCD3CE /* swe447semproj.app */;
+			productReference = 8B9F9D54234FCBE400FCD3CE /* Paw Chat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -212,24 +214,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3691FD969DE588EDAB5287A9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-swe447semproj/Pods-swe447semproj-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-swe447semproj/Pods-swe447semproj-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swe447semproj/Pods-swe447semproj-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8CDE9D663E93E5379A4ADC21 /* [CP] Check Pods Manifest.lock */ = {
+		07F1B39DF6DCC97F83FAF244 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -251,7 +236,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B607D0BD8AB7DD337E8C7443 /* [CP] Copy Pods Resources */ = {
+		2174EC38B6CBD1B84161131A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swe447semproj/Pods-swe447semproj-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swe447semproj/Pods-swe447semproj-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swe447semproj/Pods-swe447semproj-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D1B7E748157DB3091D57E94 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -409,7 +411,7 @@
 		};
 		8B9F9D69234FCBE600FCD3CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77D6165572F8118408372420 /* Pods-swe447semproj.debug.xcconfig */;
+			baseConfigurationReference = A0086C37ACA92EDBAECBBEBA /* Pods-swe447semproj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -422,7 +424,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.testproject.swe447semproj;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Paw Chat";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -430,7 +432,7 @@
 		};
 		8B9F9D6A234FCBE600FCD3CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A33D8108A606633CDBFADD4 /* Pods-swe447semproj.release.xcconfig */;
+			baseConfigurationReference = 6C606D4A215703931945506F /* Pods-swe447semproj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -443,7 +445,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.testproject.swe447semproj;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Paw Chat";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

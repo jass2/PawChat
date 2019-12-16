@@ -17,8 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
-       // let contentView = Screen()
-        let contentView = HomeViewController()
+        let contentView = Screen()
+       // let contentView = HomeViewController()
         
         
         // Use a UIHostingController as window root view controller.
@@ -27,6 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let navCon = UINavigationController(rootViewController: contentView)
             window.rootViewController = navCon
             self.window = window
+            self.window?.backgroundColor = .white
             window.makeKeyAndVisible()
         }
     }

@@ -10,6 +10,10 @@ import UIKit
 import SwiftUI
 import GoogleSignIn
 import Firebase
+import FirebaseCoreDiagnostics
+import FirebaseDatabase
+import FirebaseAuth
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

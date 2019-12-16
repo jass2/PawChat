@@ -11,13 +11,15 @@ import Foundation
 class Post {
     var postContent: String = "e";
     var poster: String = "f";
+    var postID: String = "";
     
     init() {
         
     }
     
-    init(postContent: String, poster: String) {
+    init(postContent: String, poster: String, postID: String) {
         self.postContent = postContent
         self.poster = poster
+        self.postID = postID
     }
 }

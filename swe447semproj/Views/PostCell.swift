@@ -46,7 +46,6 @@ class PostCell: UITableViewCell {
         addSubview(postBody)
         addSubview(votes)
         
-      // postBody.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 0, width: frame.size.width, height: 0, enableInsets: false)
         postBody.translatesAutoresizingMaskIntoConstraints = false
         postBody.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor).isActive = true
         postBody.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor).isActive = true

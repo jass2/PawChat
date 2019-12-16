@@ -10,6 +10,7 @@ import UIKit
 import GoogleSignIn
 import SwiftUI
 import Firebase
+import FirebaseFirestore
 
 class Screen: UIViewController, UIWindowSceneDelegate, GIDSignInDelegate {
     
@@ -33,10 +34,54 @@ class Screen: UIViewController, UIWindowSceneDelegate, GIDSignInDelegate {
             if error != nil {
                 return
             } else {
-                self.navigationController?.pushViewController(HomeViewController(), animated: true)
+                let user = Auth.auth().currentUser
+                var cond: String = "\(user?.email ?? "a@a")"
+                let condArray = cond.components(separatedBy: "@")
+                let username: String = condArray[0]
+                cond = condArray[1]
+                if (cond != "umbc.edu") {
+                    self.authFail()
+                    return
+                } else {
+                    let userID = Auth.auth().currentUser?.uid
+                    let db = Firestore.firestore()
+                    let ref = db.collection("users").document(userID!)
+                    
+                    ref.getDocument { (document, error) in
+                        if let document = document, document.exists {
+                            let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                            print("Document data: \(dataDescription)")
+                        } else {
+                            print("Document does not exist")
+                            let newUser = db.collection("user")
+                            newUser.document(userID!).setData([
+                                "blocked": false,
+                                "email": "\(user?.email ?? "a@a")",
+                                "first": "",
+                                "graduating": 2020,
+                                "major": "",
+                                "username": username,
+                            ])
+                        }
+                    }
+
+                    let homeInstance = HomeViewController()
+                    homeInstance.activeUser = username
+                    self.navigationController?.pushViewController(homeInstance, animated: true)
+              
+                }
             }
         }
     }
+    
+    @objc func authFail() -> Void {
+        let alert = UIAlertController(title: "Unable to Log in",message: "Paw Chat is only available to users via xxx@umbc.edu addresses.",preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.cancel, handler: nil))
+
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
 }
 

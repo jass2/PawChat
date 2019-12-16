@@ -7,26 +7,38 @@
 //
 
 import UIKit
+import SwiftUI
+import Foundation
+import FirebaseFirestore
 
 class ViewPostController: UIViewController {
  
     var poster:String = ""
     var mainBody:String = ""
-    @Published var comments:[String]!
+    var comments:Array<String> = []
+    var commentPoster:Array<String> = []
     var commentsView = UITableView()
     var topPost = UILabel()
+    var userLoggedIn:String = ""
+    let db = Firestore.firestore()
+    var postID:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (comments.count > 0) {
-            setTableView()
-        } else {
-            let post = PostCell()
-            post.poster.text = poster
-            post.postBody.text = mainBody
-            self.view.addSubview(post)
+        let commentsQuery = db.collection("comment").whereField("post", isEqualTo: self.postID).order(by: "time", descending: true)
+        
+        commentsQuery.getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting comments: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    self.comments.append(document.data()["text"] as! String)
+                    self.commentPoster.append(document.data()["poster"] as! String)
+                }
+                self.setTableView()
+                self.buildNewCommentButton()
+            }
         }
-        buildNewCommentButton()
     }
     
     @objc func setTableView() {
@@ -36,9 +48,14 @@ class ViewPostController: UIViewController {
            commentsView.dataSource = self
            commentsView.estimatedRowHeight = 100
            commentsView.rowHeight = UITableView.automaticDimension
-           commentsView.register(PostCell.self, forCellReuseIdentifier: "PostCell")
-           commentsView.register(CommentButton.self, forCellReuseIdentifier: "CommentButton")
+           commentsView.register(PostCell.self, forCellReuseIdentifier: "Header")
+           commentsView.register(UITableViewCell.self, forCellReuseIdentifier: "EmptyCell")
 
+        if (comments.count > 0) {
+            for index in 1...comments.count {
+                       commentsView.register(PostCell.self, forCellReuseIdentifier:"PostCell\(index)")
+                }
+        }
            
            self.view.addSubview(commentsView)
            
@@ -54,41 +71,47 @@ class ViewPostController: UIViewController {
 
 extension ViewPostController: UITableViewDelegate, UITableViewDataSource {
 func tableView(_ commentsView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return comments.count
+    if (comments.count > 0) {
+        return comments.count
+    } else {
+        return 1;
+    }
 }
 
     
 func tableView(_ commentsView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = commentsView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
     
-    let post = Post(postContent: comments[indexPath.row], poster: "")
+    if (comments.count > 0) {
+    
+    let cell = commentsView.dequeueReusableCell(withIdentifier: "PostCell\(indexPath.row + 1)", for: indexPath) as! PostCell
+    
+    let post = Post(postContent: comments[indexPath.row], poster: commentPoster[indexPath.row], postID: postID)
 
     cell.post = post
-    
     return cell
+    
+    } else {
+        let cell = commentsView.dequeueReusableCell(withIdentifier: "EmptyCell")!
+        cell.textLabel?.text = "No comments yet."
+        return cell
+    }
 }
 
     internal func tableView(_ commentsView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = commentsView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell
-        
-        headerView?.backgroundColor = .green
+        let headerView = commentsView.dequeueReusableCell(withIdentifier: "Header") as? PostCell
+                
+        headerView?.backgroundColor = .yellow
         headerView?.postBody.text = mainBody
         headerView?.poster.text = poster
-        
+    
         return headerView
     }
 
     internal func tableView(_ commentsView: UITableView,
                    heightForHeaderInSection section: Int) -> CGFloat {
-        return 100
+        return 80
     }
-    
-//    internal func tableView(_ commentsView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        let headerView = commentsView.dequeueReusableCell(withIdentifier: "CommentButton") as? CommentButton
-//
-//        return headerView
-//    }
-    
+
     
     private func buildNewCommentButton() -> Void {
         let button = UIBarButtonItem(barButtonSystemItem: .compose,
@@ -96,6 +119,7 @@ func tableView(_ commentsView: UITableView, cellForRowAt indexPath: IndexPath) -
                                      action: #selector(click))
         navigationItem.setRightBarButton(button, animated: false)
     }
+    
     @objc func click() -> Void {
         let alert = UIAlertController(title: mainBody,message: "Add your comment",preferredStyle: .alert)
 
@@ -118,10 +142,27 @@ func tableView(_ commentsView: UITableView, cellForRowAt indexPath: IndexPath) -
     }
     
     @objc private func postComment(comment: String) -> Void {
-        self.comments.append(comment)
-        print("Test")
-        print(self.comments.count)
-        commentsView.reloadData()
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: Date())
+        let postDate = calendar.date(from: components)!
+        self.db.collection("comment").document().setData([
+            "post": "\(self.postID)",
+            "poster": "\(self.userLoggedIn)",
+            "text": "\(comment)",
+            "time": "\(postDate)"
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                self.comments.append(comment)
+                self.commentPoster.append(self.userLoggedIn)
+                self.commentsView.register(PostCell.self, forCellReuseIdentifier:"PostCell\(self.comments.count)")
+                self.commentsView.reloadData()
+                print("Document successfully written!")
+            }
+        }
+      
+        
     }
 
 }
