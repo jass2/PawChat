@@ -53,7 +53,7 @@ class Screen: UIViewController, UIWindowSceneDelegate, GIDSignInDelegate {
                             print("Document data: \(dataDescription)")
                         } else {
                             print("Document does not exist")
-                            let newUser = db.collection("user")
+                            let newUser = db.collection("users")
                             newUser.document(userID!).setData([
                                 "blocked": false,
                                 "email": "\(user?.email ?? "a@a")",
